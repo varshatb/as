@@ -1,2 +1,1 @@
 echo "hai"
-echo "hello"
