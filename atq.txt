@@ -1,0 +1,56 @@
+mca@mca-Veriton-Series:~$ sudo apt-get install at
+[sudo] password for mca: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  default-mta mail-transport-agent
+The following NEW packages will be installed:
+  at
+0 upgraded, 1 newly installed, 0 to remove and 352 not upgraded.
+Need to get 37.6 kB of archives.
+After this operation, 199 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main at amd64 3.1.14-1ubuntu1 [37.6 kB]
+Fetched 37.6 kB in 0s (50.8 kB/s)
+Selecting previously unselected package at.
+(Reading database ... 173606 files and directories currently installed.)
+Preparing to unpack .../at_3.1.14-1ubuntu1_amd64.deb ...
+Unpacking at (3.1.14-1ubuntu1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+ureadahead will be reprofiled on next reboot
+Setting up at (3.1.14-1ubuntu1) ...
+atd start/running, process 3892
+Processing triggers for ureadahead (0.100.0-16) ...
+mca@mca-Veriton-Series:~$ cd anu
+mca@mca-Veriton-Series:~/anu$ at 1:59
+warning: commands will be executed using /bin/sh
+at>                 
+at> Q
+at> at 2.30 pm  
+at> echo "$(date)">>/home/mca/anu/say.txt
+at> <EOT>
+job 1 at Wed Mar 14 01:59:00 2018
+mca@mca-Veriton-Series:~/anu$ atq
+1	Wed Mar 14 01:59:00 2018 a mca
+mca@mca-Veriton-Series:~/anu$ atrm1
+No command 'atrm1' found, did you mean:
+ Command 'atrm' from package 'at' (main)
+atrm1: command not found
+mca@mca-Veriton-Series:~/anu$ atrm 1
+mca@mca-Veriton-Series:~/anu$ atq
+mca@mca-Veriton-Series:~/anu$ at 2.04 pm
+warning: commands will be executed using /bin/sh
+at> echo "$(date)">>/home/mca/anu/say.txt
+at> at 2.05 pm
+at> echo "$(date)">>/home/mca/anu/say.txt
+at> <EOT>
+job 2 at Tue Mar 13 14:04:00 2018
+mca@mca-Veriton-Series:~/anu$ atq
+2	Tue Mar 13 14:04:00 2018 a mca
+mca@mca-Veriton-Series:~/anu$ atq
+3	Tue Mar 13 14:05:00 2018 a mca
+mca@mca-Veriton-Series:~/anu$ 
+mca@mca-Veriton-Series:~/anu$ atq
+mca@mca-Veriton-Series:~/anu$ 
+
